@@ -1,0 +1,18 @@
+
+selectp -t 0
+splitw -h -p 50 
+
+selectp -t 1
+splitw -v -p 30 
+
+selectp -t 1 
+splitw -v -p 50 
+
+selectp -t 0 
+splitw -v -p 50 
+
+
+send-keys -t 0 'cd git' C-m
+send-keys -t 0 'cd qatar-tas' C-m 
+send-keys -t 1 'cd bin' C-m
+send-keys -t 2 './hello.sh' C-m

@@ -1,0 +1,131 @@
+"-----------------------------------------
+"General
+"-----------------------------------------
+
+set nocp
+
+" pathogen
+call pathogen#infect()
+
+filetype plugin on
+filetype indent on
+
+" encoding
+set encoding=utf-8
+set fileencodings=utf-8
+
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+
+set mouse=a
+
+"show line number
+set relativenumber
+set number
+
+syntax enable
+colorscheme elflordmod
+
+"------------------------------------------------------------------------------
+" map bindings, autocmd
+"------------------------------------------------------------------------------
+"let mapleader = ","
+"map <Leader>s :mks! default.vimsession<CR>
+"map <Leader>l :source default.vimsession<CR>
+
+
+"------------------------------------------------------------------------------
+" CtrlP
+"------------------------------------------------------------------------------
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_use_caching = 1
+let g:ctrlp_show_hidden = 1
+
+""don't change directory in ctrlp
+let g:ctrlp_working_path_mode = '0'
+
+"follow symlinks
+let g:ctrlp_follow_symlinks = 1
+
+""ignore following symlinks
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](build|\.git|\.hg|\.svn)$',
+  \ 'file': '\v.(exe|so|dll)$',
+  \}
+
+"------------------------------------------------------------------------------
+" VTreeExplore
+"------------------------------------------------------------------------------
+
+let treeExplVertical = 0 "
+let treeExplWinSize = 35 " menu window size
+let treeExplDirSort = 1 " dir sort first
+let treeExplHidden = 1 " show hidden files
+
+
+
+"" Solarized
+"syntax enable
+"set background=dark
+
+"map ^[` gt<CR>
+"map ^[1 1gt<CR>
+"map ^[2 2gt<CR>
+"map ^[3 3gt<CR>
+"map ^[4 4gt<CR>
+"map ^[5 5gt<CR>
+"map ^[6 6gt<CR>
+"map ^[7 7gt<CR>
+"map ^[8 8gt<CR>
+"map ^[9 9gt<CR>
+
+""""Below is vundle stuff
+"""
+"""filetype off                  " required
+"""
+"""" set the runtime path to include Vundle and initialize
+"""map the runtime path to include Vundle and initialize
+"""set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
+"""set rtp+=~/dotfiles/.vim/bundle/ctrlp.vim
+"""
+"""call vundle#begin()
+"""" " alternatively, pass a path where Vundle should install plugins
+"""" "call vundle#begin('~/some/path/here')
+"""
+"""" " let Vundle manage Vundle, required
+"""Plugin 'VundleVim/Vundle.vim'
+"""
+"""
+"""" plugin on GitHub repo
+"""Plugin 'tpope/vim-fugitive'
+"""
+"""" a.vim
+"""Plugin 'vim-scripts/a.vim'
+"""
+"""" Vim-dispatch
+"""Plugin 'tpope/vim-dispatch'
+"""
+"""" Ctrl-p
+"""Plugin 'ctrlpvim/ctrlp.vim'
+"""
+""""don't change directory in ctrlp
+"""let g:ctrlp_working_path_mode = '0'
+"""
+""""follow symlinks
+"""let g:ctrlp_follow_symlinks = 1
+"""
+""""ignore following symlinks
+"""let g:ctrlp_custom_ignore = {
+"""  \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+"""  \ 'file': '\v.(exe|so|dll)$',
+"""  \}
+"""
+"""
+"""" All of your Plugins must be added before the following line
+"""call vundle#end()            " required
+"""filetype plugin indent on    " required

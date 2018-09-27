@@ -1,0 +1,12 @@
+[user]
+	email = yuanxia.lee@lmco.com
+	name = ShaSha
+[color]
+	ui = auto
+[push]
+  default = simple
+[core]
+	editor = vim
+	autocrlf = input
+[http]
+	postBuffer = 157286400

@@ -1,0 +1,9 @@
+selectp -t 0        # select the first (0) pane
+splitw -v -p 20     # split it into two halves
+selectp -t 0        
+send-keys -t 0 "vim" C-m
+#send-keys -t 0 ":vs" C-m #split vim
+
+#selectp -t 1         # select the new, second (1) pane 
+#splitw -v -p 50     # split it into two halves 
+#selectp -t 0        # go back to the first pane 
