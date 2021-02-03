@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # .bashrc
 
 # Source global definitions
@@ -62,11 +64,11 @@ export PS1="${BOLD}[\u@\h]:${RESET} \w \`parse_git_branch\`\\n\$ "
 
 # LMI
 export LMI_ID="e372678"
-export COMPUTER_ID="sr315351"
+export COMPUTER_ID="sr335656"
 
 # aliases
 #alias makej="echo `nproc`-1 | bc | xargs echo | xargs make -j"
-alias cmakej="clear;makej" 
+alias cmakej="clear;makej"
 alias in_use="if (( `who | grep -v pts | wc -l` > 2 )); then echo \"True\"; else echo \"False\"; fi"
 
 # PATH updates
@@ -75,17 +77,16 @@ export PATH=$HOME/bin:$GOPATH/bin:$PATH
 export XAUTHORITY=$HOME/.Xauthority
 
 # Set the amount of time to wait before closing a remote connection
-export TMOUT=7200 # in seconds (this is 2 hours)
-
+export TMOUT=0 # in seconds (this is infinite)
 
 # Needed it for github
-PROXY="proxy3.lmco.com:80"
-export HTTP_PROXY=${PROXY}
-export http_proxy=${PROXY}
-export HTTPS_PROXY=${PROXY}
-export https_proxy=${PROXY}
 export GIT_SSL_NO_VERIFY=1
 
-# Load custom commands 
-. ~/bin/switch_build_src.bsh
-. ~/bin/usernames.sh
+# Ian's tunnel
+export LMIDOMAIN="us"
+export ORLSR="orlsr335656.us.lmco.com"
+alias rwin="xfreerdp -d $LMIDOMAIN -g 1920x1080 -a 16 $ORLSR"
+
+# Load custom commands
+#. ~/bin/switch_build_src.bsh
+#. ~/bin/usernames.sh

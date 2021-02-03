@@ -10,3 +10,6 @@
 	autocrlf = input
 [http]
 	postBuffer = 157286400
+[alias]
+  co = checkout 
+  ci = commit
